@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "Agent-Data-Lake"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorageabc2_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureSynapseAnalytics1_connectionString": {
+			"value": ""
+		},
+		"AzureSynapseAnalytics2_connectionString": {
+			"value": ""
+		},
+		"DatalakeStorageLinkedService_accountKey": {
+			"value": ""
+		},
+		"MyFirstAzureBlobStorage_connectionString": {
+			"value": ""
+		},
+		"SQLDBTest_connectionString": {
+			"value": ""
+		},
+		"SqlServerDBLinkedService_connectionString": {
+			"value": ""
+		},
+		"SqlServersynapsedevtest_connectionString": {
+			"value": ""
+		},
+		"SynapseSQLServer_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://emplifidatakalekdev.dfs.core.windows.net"
+		},
+		"DatalakeStorageLinkedService_properties_typeProperties_url": {
+			"value": "https://adfdatalakeastute.dfs.core.windows.net/"
+		}
+	}
+}
