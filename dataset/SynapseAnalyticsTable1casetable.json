@@ -1,0 +1,275 @@
+{
+	"name": "SynapseAnalyticsTable1casetable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSynapseAnalytics1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "Id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CompanyId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "epc_case_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "AddressId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "StatusId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ContactMultiplier",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "TotalWorkTime",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CreateDateId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CreateTimeId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ChangedDateId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ChangedTimeId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ReceivedDateId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ReceivedTimeId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ClosedDateId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ClosedTimeId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CustomerId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "epc_added_by_user_code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "epc_changed_by_user_code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "loadProcessId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "loadProcessDt",
+				"type": "datetime2",
+				"scale": 6
+			},
+			{
+				"name": "CaseCreatedDt",
+				"type": "datetime2",
+				"scale": 6
+			},
+			{
+				"name": "caseChangedDt",
+				"type": "datetime2",
+				"scale": 6
+			},
+			{
+				"name": "receiveddt",
+				"type": "datetime2",
+				"scale": 6
+			},
+			{
+				"name": "Casecloseddt",
+				"type": "datetime2",
+				"scale": 6
+			},
+			{
+				"name": "ePCAppUrl",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "InitialRepresentativeId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ResponsibleRepId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SpecialCaseStatusId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "MethodId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SourceId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "AddresseeId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ReviewedById",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DemoCodeId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "NeedsCorrectionId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ReviewedDateId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ReviewedDateTimeId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SMARTMentionID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ReviewScore01",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ReviewScore02",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ReviewScore03",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ReviewScore04",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ReviewScore05",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ReviewScore06",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ReviewScore07",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ReviewScore08",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ReviewScore09",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ReviewScore10",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CRSPeriod",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RelatedtoCase",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CRSNumber",
+				"type": "nvarchar"
+			},
+			{
+				"name": "OutboundSMS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SocialConversationID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SocialPostID",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "a1_azoo8x4f3rtj",
+			"table": "Cases"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,9 @@
+{
+	"name": "Agent-Data-Lake",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "5ff137be-0195-4e29-92a7-ae015abc50d7",
+		"tenantId": "36d0fcc7-f819-4dbc-8957-c143c62da32b"
+	}
+}

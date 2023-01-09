@@ -1,0 +1,58 @@
+{
+	"name": "DS_Sourec_Dynamic",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"datasetFilename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().datasetFilename",
+					"type": "Expression"
+				},
+				"container": "emplifidatalakedev"
+			},
+			"columnDelimiter": ",",
+			"rowDelimiter": "\n",
+			"escapeChar": "\"",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Account Type",
+				"type": "String"
+			},
+			{
+				"name": "Account Number",
+				"type": "String"
+			},
+			{
+				"name": "Transaction Date",
+				"type": "String"
+			},
+			{
+				"name": "Cheque Number",
+				"type": "String"
+			},
+			{
+				"name": "Transaction Description",
+				"type": "String"
+			},
+			{
+				"name": "CAD$",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

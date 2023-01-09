@@ -1,0 +1,17 @@
+{
+	"name": "MyFirstSqlServerTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServerDBLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "MyFirstCustomerTable"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

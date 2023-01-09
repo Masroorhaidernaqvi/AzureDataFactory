@@ -1,0 +1,115 @@
+{
+	"name": "tableToCsv",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "SqlServerTable4",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				},
+				{
+					"dataset": {
+						"referenceName": "SqlServerTable5",
+						"type": "DatasetReference"
+					},
+					"name": "Transactiontable"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "SqlServerTable6",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "select1"
+				},
+				{
+					"name": "select2"
+				},
+				{
+					"name": "join1"
+				},
+				{
+					"name": "cast1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          customer_Id as integer,",
+				"          DOB as string,",
+				"          Gender as string,",
+				"          city_code as string,",
+				"          Customer_Name as string,",
+				"          Created_Modified_Date as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     format: 'table') ~> source1",
+				"source(output(",
+				"          transaction_id as integer,",
+				"          cust_id as string,",
+				"          tran_date as string,",
+				"          prod_subcat_code as integer,",
+				"          prod_cat_code as integer,",
+				"          Qty as integer,",
+				"          Rate as string,",
+				"          Tax as decimal(7,3),",
+				"          total_amt as decimal(9,3),",
+				"          Store_type as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     format: 'table') ~> Transactiontable",
+				"source1 select(mapColumn(",
+				"          customer_Id,",
+				"          Customer_Name",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1",
+				"Transactiontable select(mapColumn(",
+				"          transaction_id,",
+				"          cust_id,",
+				"          tran_date,",
+				"          prod_subcat_code,",
+				"          prod_cat_code,",
+				"          Qty,",
+				"          Rate,",
+				"          Tax,",
+				"          total_amt,",
+				"          Store_type",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select2",
+				"select1, cast1 join(customer_Id == cust_id,",
+				"     joinType:'outer',",
+				"     matchType:'exact',",
+				"     ignoreSpaces: false,",
+				"     broadcast: 'auto')~> join1",
+				"select2 cast(output(",
+				"          cust_id as integer",
+				"     ),",
+				"     errors: true) ~> cast1",
+				"join1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
+			]
+		}
+	}
+}

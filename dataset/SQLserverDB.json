@@ -1,0 +1,27 @@
+{
+	"name": "SQLserverDB",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SQLDBTest",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "name",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "demodatasettarget"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

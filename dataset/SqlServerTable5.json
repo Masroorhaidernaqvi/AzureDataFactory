@@ -1,0 +1,66 @@
+{
+	"name": "SqlServerTable5",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServerDBLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "transaction_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "cust_id",
+				"type": "varchar"
+			},
+			{
+				"name": "tran_date",
+				"type": "varchar"
+			},
+			{
+				"name": "prod_subcat_code",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "prod_cat_code",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Qty",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Rate",
+				"type": "varchar"
+			},
+			{
+				"name": "Tax",
+				"type": "decimal",
+				"precision": 7,
+				"scale": 3
+			},
+			{
+				"name": "total_amt",
+				"type": "decimal",
+				"precision": 9,
+				"scale": 3
+			},
+			{
+				"name": "Store_type",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Transactions"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
